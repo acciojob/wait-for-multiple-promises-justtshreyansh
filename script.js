@@ -38,19 +38,19 @@ const promise3 = ()=>{
 
 Promise.all([promise1(),promise2(),promise3()]).then((data)=>{
 	output.removeChild(tr);
-	output.innerHTML = "";
+	
 	output.innerHTML= `
 	<tr>
 	<td>${data[0][0]}</td>
-	<td>${Math.floor((data[0][1]/1000).toFixed(3))}</td>
+	<td>${Math.floor((Number(data[0][1])/1000).toFixed(3))}</td>
 	</tr>
 	<tr>
 	<td>${data[1][0]}</td>
-	<td>${Math.floor((data[1][1]/1000).toFixed(3))}</td>
+	<td>${Math.floor((Number(data[1][1])/1000).toFixed(3))}</td>
 	</tr>
 	<tr>
 	<td>${data[2][0]}</td>
-	<td>${Math.floor((data[2][1]/1000).toFixed(3))}</td>
+	<td>${Math.floor((Number(data[2][1])/1000).toFixed(3))}</td>
 	</tr>
 	<tr>
 	<td>Total</td>
