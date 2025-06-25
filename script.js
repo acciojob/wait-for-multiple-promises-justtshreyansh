@@ -24,7 +24,7 @@ const promise3 = ()=>{
 		},time3)
 	})
 };
-function DisplayBefore(){
+
 	const tr = document.createElement('tr');
 	tr.setAttribute('id','loading');
 	const td = document.createElement('td');
@@ -34,10 +34,10 @@ function DisplayBefore(){
 	tr.appendChild(td);
 	output.appendChild(tr);
 	
-}
-DisplayBefore()
+
+
 Promise.all([promise1(),promise2(),promise3()]).then((data)=>{
-	console.log(data);
+	output.removeChild(tr);
 	output.innerHTML = "";
 	output.innerHTML= `
 	<tr>
