@@ -42,15 +42,15 @@ Promise.all([promise1(),promise2(),promise3()]).then((data)=>{
 	output.innerHTML= `
 	<tr>
 	<td>${data[0][0]}</td>
-	<td>${(data[0][1]/1000).toFixed(3)}</td>
+	<td>${Math.floor((data[0][1]/1000).toFixed(3))}</td>
 	</tr>
 	<tr>
 	<td>${data[1][0]}</td>
-	<td>${(data[1][1]/1000).toFixed(3)}</td>
+	<td>${Math.floor((data[1][1]/1000).toFixed(3))}</td>
 	</tr>
 	<tr>
 	<td>${data[2][0]}</td>
-	<td>${(data[2][1]/1000).toFixed(3)}</td>
+	<td>${Math.floor((data[2][1]/1000).toFixed(3))}</td>
 	</tr>
 	<tr>
 	<td>Total</td>
