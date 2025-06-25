@@ -26,6 +26,7 @@ const promise3 = ()=>{
 };
 function DisplayBefore(){
 	const tr = document.createElement('tr');
+	tr.setAttribute('id','loading');
 	const td = document.createElement('td');
 	td.setAttribute('colspan',"2");
 	td.style.textAlign = "center"
@@ -37,6 +38,7 @@ function DisplayBefore(){
 DisplayBefore()
 Promise.all([promise1(),promise2(),promise3()]).then((data)=>{
 	console.log(data);
+	output.innerHTML = "";
 	output.innerHTML= `
 	<tr>
 	<td>${data[0][0]}</td>
